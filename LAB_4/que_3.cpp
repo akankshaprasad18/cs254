@@ -15,15 +15,13 @@ int Partition(int arr[],int l,int h) {
     i++;
     swap(arr[i],arr[h]);
     return i;
-    // cout<<h-i+1<<endl;
-    // return h-i+1;
+    
 }
 int Quickselect(int k,int arr[],int l,int h){
     int pivot_f=Partition(arr,l,h);
     int size_r=h-pivot_f;
     if(size_r==k-1){
-        // cout<<"PIV INDEX"<<piv_index<<endl;
-        // cout<<"VALUE"<<arr[piv_index]<<endl;
+        
         return arr[pivot_f];
     }
     else if(size_r>k-1){
@@ -35,11 +33,9 @@ int Quickselect(int k,int arr[],int l,int h){
 
 }
 signed main(){
-    // int arr[] = {4,2,6,7,1,3,1,2};
-    // int n = sizeof(arr) / sizeof(arr[0]);
-    // int k=3;
-    freopen("test_cases_Q3.txt","r",stdin);
-    freopen("output_Q3.txt","w",stdout);
+    
+    freopen("test_cases.txt","r",stdin);
+    freopen("output.txt","w",stdout);
     int t;
     cin >> t;
 
@@ -52,7 +48,7 @@ signed main(){
         for(int i = 0; i<N1; i++){
             cin >> a[i];
         }
-    int k=90000;
+    int k=2;
 
     int ans=Quickselect(k,a,0,N1-1);
     cout<<ans<<endl;
