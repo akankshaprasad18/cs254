@@ -5,8 +5,7 @@ int b[200000];
 
 
 int find_median(int arr[],int brr[],int n,int m, int low,int high) {
-    //  int low=0;
-    // int high=n;
+    
     
 
     int cut1=(low+high)/2;
@@ -47,14 +46,7 @@ int find_median(int arr[],int brr[],int n,int m, int low,int high) {
     }
 }
 int main(){
-    // int arr[] = {2};
-    // int n = 1;
-    // int brr[]={1,3};
-    // int m =2;
-    // int low=0;
-    // int high=n;
-    // int ans=find_median(arr, brr, n, m,  low, high);
-    // cout<<ans<<endl;
+    
     freopen("test_cases_Q2.txt","r",stdin);
     freopen("output_Q2.txt","w",stdout);
     int t; cin >> t;
@@ -80,7 +72,7 @@ int main(){
         }
 
         
-        // cout << "Median of the two sorted arrays: "<< median_sorted(a, b) << endl;
+       
     }
 
 

@@ -6,23 +6,23 @@ using namespace std;
 long long int ct=0;
 
 void Merge(vector<int> &a, int l, int m, int h) {
-    int i = l; // Initialize i to the start of the left sub-array
+    int i = l; 
     int j = m + 1;
     int k = 0;
-    vector<int> temp(h-l+1); // Temporary array to store merged sub-arrays
+    vector<int> temp(h-l+1); 
 
     while (i <= m && j <= h) {
         if (a[i] <= a[j]) {
             temp[k++] = a[i++];
         } else {
             temp[k++] = a[j++];
-             ct += (m - i + 1); // Increase count for all remaining elements in left sub-array
+             ct += (m - i + 1); 
         }
     }
 
     while (i <= m) {
         temp[k++] = a[i++];
-        // ct++;
+       
     }
 
     while (j <= h) {
@@ -30,7 +30,7 @@ void Merge(vector<int> &a, int l, int m, int h) {
    
     }
 
-    // Copying back the sorted elements to the original array
+    
     for (i = l, k = 0; i <= h; i++, k++) {
         a[i] = temp[k];
     }
@@ -46,8 +46,8 @@ void MergeSort(vector<int> &a, int l, int h) {
 }
 
 int main() {
-    freopen("test_cases_Q1.txt","r",stdin);
-    freopen("output_Q1.txt","w",stdout);
+    freopen("test_cases.txt","r",stdin);
+    freopen("output.txt","w",stdout);
     int t;
     cin >> t;
 
