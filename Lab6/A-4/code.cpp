@@ -21,7 +21,7 @@ public:
         return false;
     }
 
-    // Function to detect cycle in a directed graph.
+    
     bool isCyclic(int V, vector<int> adj[]) {
         int visited[V] = {0};
         int stack[V] = {0};
@@ -42,8 +42,8 @@ void addEdge(vector<int> adj[], int u, int v) {
 }
 
 int main() {
-    ifstream inputFile("input2.txt");
-    ofstream outputFile("output2.txt");
+    ifstream inputFile("input.txt");
+    ofstream outputFile("output.txt");
 
     if (!inputFile.is_open() || !outputFile.is_open()) {
         cout << "Failed to open the files." << endl;

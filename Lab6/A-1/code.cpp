@@ -11,21 +11,21 @@ public:
         int indegree[V] = {0};
         queue<int> q;
 
-        // Calculate indegree for each vertex
+        
         for (int i = 0; i < V; i++) {
             for (auto x : adj[i]) {
                 indegree[x]++;
             }
         }
 
-        // Push vertices with 0 indegree to the queue
+        
         for (int i = 0; i < V; i++) {
             if (indegree[i] == 0) {
                 q.push(i);
             }
         }
 
-        // Perform topological sorting
+       
         while (!q.empty()) {
             int p = q.front();
             ans.push_back(p);

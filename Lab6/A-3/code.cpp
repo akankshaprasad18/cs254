@@ -26,7 +26,7 @@ private:
     }
 
 public:
-    // Function to find the number of strongly connected components in the graph.
+    
     int kosaraju(int V, vector<int> adj[]) {
         vector<int> vis(V, 0);
         stack<int> st;
