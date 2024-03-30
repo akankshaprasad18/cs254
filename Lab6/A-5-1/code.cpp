@@ -61,9 +61,9 @@ public:
 };
 
 int main() {
-    // Input file handling
-    freopen("input2.txt", "r", stdin);
-    freopen("output2.txt", "w", stdout);
+    
+    // freopen("input2.txt", "r", stdin);
+    // freopen("output2.txt", "w", stdout);
 
     int n;
     cin >> n;

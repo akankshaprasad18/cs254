@@ -77,7 +77,7 @@ int QuicksortPartition(int A[],int low,int high){
     int i=(low-1);
     for(int j=low;j<=high;j++){
         if(A[j]<pivot){
-            i++;
+            i++; 
             swap(A[i],A[j]);
         }
         if(A[j]==pivot){
