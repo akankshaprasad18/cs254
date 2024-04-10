@@ -5,24 +5,29 @@
 using namespace std;
 
 int knapsack(vector<int>& wt, vector<int>& val, int n, int W) {
-    vector<vector<int>> dp(n, vector<int>(W + 1, 0));
-
-    for (int i = wt[0]; i <= W; i++) {
-        dp[0][i] = val[0];
-    }
-
-    for (int ind = 1; ind < n; ind++) {
-        for (int cap = 0; cap <= W; cap++) {
-            int notTaken = dp[ind - 1][cap];
-            int taken = INT_MIN;
-            if (wt[ind] <= cap) {
-                taken = val[ind] + dp[ind - 1][cap - wt[ind]];
-            }
-            dp[ind][cap] = max(notTaken, taken);
+     vector<int> prev(W+1,0);
+       for(int i=0;i<=W;i++){
+           if(wt[0]<=i){
+               prev[i]=val[0];
+           }
+           else{
+               prev[i]=0;
+           }
+       }
+       for(int i=1;i<n;i++){
+           for(int j=W;j>=0;j--){
+               int nottake=prev[j];
+        int take=INT_MIN;
+        if(wt[i]<=j){
+        take=val[i]+prev[j-wt[i]];
         }
-    }
+         prev[j]=max(take,nottake);
+           }
+          
+       }
+       
+       return prev[W];
 
-    return dp[n - 1][W];
 }
 
 int main() {
